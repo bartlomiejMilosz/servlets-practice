@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submit Your Details</title>
+</head>
+<body>
+<h1>Submit Your Details</h1>
+<form action="/app/userdata" method="POST">
+    <div>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+    </div>
+    <div>
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div>
+    <div>
+        <label for="hobbies">Hobbies:</label><br>
+        <select id="hobbies" name="hobbies" multiple>
+            <option value="sports">Sports</option>
+            <option value="reading">Reading</option>
+            <option value="gaming">Gaming</option>
+        </select>
+    </div>
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
