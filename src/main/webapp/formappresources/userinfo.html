@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Information</title>
+</head>
+<body>
+<h1>User Information</h1>
+<div id="userInfo">
+    <!-- User info will be displayed here -->
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const params = new URLSearchParams(window.location.search);
+        const userId = params.get('userId');
+        if (userId) {
+            fetch(`/app/getUserData?userId=${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    const userInfoDiv = document.getElementById('userInfo');
+                    userInfoDiv.innerHTML = `
+                        <p>Username: ${data.username}</p>
+                        <p>Gender: ${data.gender}</p>
+                        <p>Hobbies: ${data.hobbies.join(", ")}</p>
+                    `;
+                })
+                .catch(error => console.error('Error:', error));
+        } else {
+            document.getElementById('userInfo').innerHTML = '<p>No user data found.</p>';
+        }
+    });
+</script>
+</body>
+</html>
