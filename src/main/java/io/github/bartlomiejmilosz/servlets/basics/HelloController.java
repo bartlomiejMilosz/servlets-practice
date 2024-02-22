@@ -1,4 +1,4 @@
-package io.github.bartlomiejmilosz.servlets;
+package io.github.bartlomiejmilosz.servlets.basics;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;

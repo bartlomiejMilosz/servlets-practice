@@ -1,4 +1,4 @@
-package io.github.bartlomiejmilosz.servlets;
+package io.github.bartlomiejmilosz.servlets.basics;
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
